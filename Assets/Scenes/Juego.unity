@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemigos:
   - {fileID: 5027331055035247292, guid: 0e7db09c257a9664a831f76fa2b5ce83, type: 3}
-  - {fileID: 3706823736730624408, guid: 902d7d72dafa74a4db77b6a21130267d, type: 3}
+  - {fileID: 919132149155446097, guid: 348cf52daebcbee4ca0be5605eecf674, type: 3}
   generarEnemigo: 5
   bala: {fileID: 864499481713248094, guid: 8dd8fb4ea5f3eb74989ef9600bde8ce5, type: 3}
   arCamera: {fileID: 924134859}
