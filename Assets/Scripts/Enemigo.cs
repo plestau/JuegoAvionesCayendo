@@ -7,6 +7,7 @@ public class Enemigo : MonoBehaviour
     public GameObject explosion;
     public float umbralBajo = -5f;
     public bool esAvion;
+    public bool esPocion;
 
     private void Update()
     {
@@ -16,13 +17,9 @@ public class Enemigo : MonoBehaviour
 
             if (esAvion)
             {
-                juego.GetComponent<Juego>().DecrementarPuntuacion();
+                juego.GetComponent<Juego>().PerderVida();
             }
-            else
-            {
-                juego.GetComponent<Juego>().IncrementarPuntuacion();
-            }
-
+            
             GameObject instantiateExplosion = Instantiate(explosion, transform.position, transform.rotation);
             Destroy(instantiateExplosion, 1f);
 
@@ -44,9 +41,9 @@ public class Enemigo : MonoBehaviour
             {
                 juego.GetComponent<Juego>().IncrementarPuntuacion();
             }
-            else
+            else if (esPocion)
             {
-                juego.GetComponent<Juego>().DecrementarPuntuacion();
+                juego.GetComponent<Juego>().CurarVida();
             }
         }
     }
